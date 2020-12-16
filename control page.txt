@@ -1,0 +1,462 @@
+
+
+<html class="ui-mobile"><head><base href="http://192.168.1.11/">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>SO</title>
+
+<meta name="description" content="Демонстрационная страница движка DataLife Engine">
+<meta name="keywords" content="Самостоятельность, ответственность">
+<meta name="generator" content="DataLife Engine (http://dle-news.ru)">
+<link rel="search" type="application/opensearchdescription+xml" href="http://192.168.1.11/engine/opensearch.php" title="SO">
+<link rel="alternate" type="application/rss+xml" title="SO" href="http://192.168.1.11/engine/rss.php">
+<script type="text/javascript" src="/engine/classes/js/jquery.js"></script>
+<script type="text/javascript" src="/engine/classes/js/jqueryui.js"></script>
+<script type="text/javascript" src="/engine/classes/js/dle_js.js"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+<link href="/templates/Smartphone/css/engine.css" rel="stylesheet">
+<link href="/templates/Smartphone/css/style.css" rel="stylesheet">
+<script src="/templates/Smartphone/js/libs.js" type="text/javascript"></script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<script src="/templates/Smartphone/js/jquery-1.11.1.min.js"></script>
+<link href="/templates/Smartphone/css/jquery-ui.css">
+<script src="/templates/Smartphone/js/jquery-ui.js"></script>
+</head><body class="ui-mobile-viewport ui-overlay-b" data-new-gr-c-s-check-loaded="14.987.0" data-gr-ext-installed=""><audio class="audioDemo" controls="" preload="none" style="display:none;">
+<source src="/ss/be.mp3" type="audio/mpeg">
+<source src="audio/music.ogg" type="audio/ogg">
+</audio>
+<link media="screen" href="/templates/Smartphone/css/jquery.mobile-1.4.3.min.css" type="text/css" rel="stylesheet">
+<script src="/templates/Smartphone/js/jquery.mobile-1.4.3.min.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="/templates/Smartphone/js/script.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="/templates/Smartphone/js/my.js" type="application/x-javascript" charset="utf-8"></script>
+<style type="text/css" media="screen">
+	@import "/templates/Smartphone/css/style1.css";
+	#main_page, #today_tasks, #all_tasks, #do_task, #sched, #change_task_list, #all_targets{
+		<!--background-image: url("/templates/Smartphone/css/thug_life5.jpg") !important;-->
+	}
+</style>	 
+<!--[if lt IE 9]><script src="/templates/Smartphone/js/html5shiv.js" type="text/javascript"></script><![endif]-->
+
+
+	<div data-role="page" id="main_page" data-theme="b" data-url="main_page" tabindex="0" class="ui-page ui-page-theme-b ui-page-active" style="">
+	    <div data-role="header1">
+			<h1></h1>
+			
+
+<a href="" id="login-btn" class="ui-btn ui-corner-all ui-btn-inline">duh</a>
+<div id="lg-dialog" title="О пользователе" class="wideDialog">
+	<a id="lg-close" class="thd ui-link">Закрыть</a>
+	<ul data-role="listview" data-inset="true" data-theme="a" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a">			
+		<li class="ui-first-child"><a href="http://192.168.1.11/index.php?subaction=userinfo&amp;user=duh" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Мой профиль</a></li>
+		<li><a href="http://192.168.1.11/index.php?do=pm" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Cообщения (0 | 1)</a></li>
+		<li><a href="http://192.168.1.11/index.php?do=favorites" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Мои закладки</a></li>
+		<li><a href="http://192.168.1.11/index.php?do=stats" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Статистика</a></li>
+		<li><a href="http://192.168.1.11/index.php?subaction=newposts" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Обзор непрочитанного</a></li>
+		
+		<li class="ui-last-child"><a href="http://192.168.1.11/index.php?action=logout" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Завершить сеанс!</a></li>
+	</ul>
+</div>
+
+					<a onclick="kid_viol(user_id)" class="ui-btn ui-corner-all ui-btn-inline money"> Money:<span class="deb">55</span>&nbsp;&nbsp;&nbsp;<span class="hm">99</span>&nbsp;&nbsp;&nbsp;<span id="cred" class="cred" style="color:red">-66</span>&nbsp;&nbsp;<span class="cgreen" style="color:green">0</span></a>
+
+			<a onclick="show_kids1()" class="ui-btn ui-corner-all ui-btn-inline">Setings</a>
+			
+		</div>
+<div id="sound"></div>
+		<div data-role="content" class="ui-content" role="main">
+			<ul data-role="listview" data-inset="true" data-theme="a" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a">
+				<li class="ui-first-child"><a id="go_to_tasks" onclick="go_to_tasks(63);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Задачи</a></li>
+				<li><a onclick="change_task_list();" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Изменить список задач</a></li>
+				<li><a onclick="show_schedule(0,0);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Расписания</a></li>
+				<li><a onclick="show_targets_list1();" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Цели</a></li>
+				<li><a onclick="show_resources_list1();" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Ресурсы</a></li>
+				<li><a onclick="show_rules_list(0,u_name);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Список правил</a></li>
+				<li><a onclick="math_trainer_insert();" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Матем. тренажер</a></li>
+				<li><a onclick="show_v_butt();" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Управление</a>
+				</li><li><a onclick="annyv();" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Anniversary</a>
+				
+			
+				</li><li class="ui-last-child"><a onclick="show_kids();document.location.href = &quot;#show_kids_list&quot;;" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Дети</a>
+
+			
+			</li></ul>
+		</div> 
+		<section id="content">
+			
+			<div id="dle-content"></div>
+		</section>
+		<div data-role="footer" id="ttt" role="contentinfo" class="ui-footer ui-bar-inherit"> 
+		</div>
+	</div>	
+	<div data-role="page" id="today_tasks" data-theme="b" data-url="today_tasks">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a data-rel="back" class="ui-btn ui-corner-all ui-btn-inline" style="z-index:12">Назад!</a>
+			<a href="#sum_time_today" class="ui-btn ui-corner-all ui-btn-inline" style="z-index:12" id="today_tasks_d1">SUM Time</a>
+			<a class="ui-btn ui-corner-all ui-btn-inline" style="z-index:12" onclick="show_act();">Activities</a>
+		</div>
+		
+		<div data-role="fieldcontain">
+			<ul id="today_tasks_d" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a" data-role="listview" data-="" inset="true" data-theme="a">
+			</ul>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	<div data-role="page" id="sum_time_today" data-theme="b" data-url="sum_time_today">
+		<div data-role="header" data-type="horizontal">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a data-rel="back" data-role="button">Назад</a>
+			<a href="#sum_day_back" data-role="button" id="d_back">Day back</a>
+			<a href="#sum_day_forward" data-role="button" id="d_forward">Day forward</a>
+		</div>
+		</div>		
+		<div data-role="fieldcontain">
+		<ul id="sum_time_today_d" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a" data-role="listview" data-inset="true" data-theme="a">
+			
+			</ul>
+			
+		</div>
+		<div data-role="footer">				
+				
+		</div>
+			
+	</div>
+	<div data-role="page" id="all_tasks" data-theme="b" data-url="all_tasks">
+		<div data-role="header">
+			<h1></h1>	
+			<a data-rel="back" class="ui-btn-left">Назад</a>
+		</div>
+		<div data-role="content">	
+			<ul id="tb1_div_1" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a" data-role="listview" data-inset="true" data-theme="a">
+			</ul>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+			<div data-role="page" id="all_resource" data-theme="b" data-url="all_resource">
+		<div data-role="header">
+			<h1></h1>
+			<a data-rel="back" class="ui-btn-left">Назад</a>
+			<a onclick="new_resource();" class="ui-btn-right" style="position:fixed;  z-index:12">Add new resource</a>
+		</div>
+		<div data-role="content">	
+			<ul id="my_resource" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a" data-role="listview" data-inset="true" data-theme="a">
+			</ul>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+		<div data-role="page" id="all_targets" data-theme="b" data-url="all_targets">
+		<div data-role="header2">
+			<h1></h1>
+			<a data-rel="back" class="ui-btn ui-corner-all ui-btn-inline">Назад</a>
+			<a onclick="new_target();" class="ui-btn ui-corner-all ui-btn-inline">Add new target</a>
+		</div>
+		<div data-role="content">	
+			<ul id="my_targets" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a" data-role="listview" data-inset="true" data-theme="a">
+			</ul>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+		<div data-role="page" id="add_target" data-theme="b" data-url="add_target">
+		<div data-role="header">
+			<h1></h1>	
+			<a data-rel="back" class="ui-btn-left">Назад</a>
+		</div>
+		<div data-role="content">	
+			<label for="name">Target name:</label>
+			<input type="text" name="name" id="target_name">
+			<label for="descr">Target description:</label>
+			<textarea name="descr" id="target_descr"> </textarea>
+			<p>DeadLine: <input type="text" id="datepicker"></p>
+<label for="handbooks">Select handbook</label>
+<select id="handbooks">
+<option></option>
+<option>Slower</option>
+<option>Slow</option>
+<option>Medium</option>
+<option>Fast</option>
+<option>Faster</option>
+</select>
+			
+			<ul data-role="listview" data-inset="true" data-theme="a">
+				<li><a onclick="add_target()">Add target</a></li>
+			</ul>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	
+	
+	
+	
+	<div data-role="page" id="show_kids_list" data-theme="b" data-url="show_kids_list">
+		<div data-role="header">
+			<h1></h1>	
+			<a data-rel="back" class="ui-btn-left">Назад</a>
+			<a class="ui-btn-right" onclick="show_kids();">Refresh</a>
+		</div>
+		<div data-role="content">	
+			<ul id="show_kids" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a" data-role="listview" data-inset="true" data-theme="a">
+			</ul>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	
+	<div data-role="page" id="v_butt" data-theme="b" data-url="v_butt">
+		<div data-role="header">
+			<h1></h1>	
+			<a data-rel="back" class="ui-btn-left">Назад</a>
+			<a class="" onclick="show_v_butt()">Refresh</a>
+		</div>
+		<div data-role="content" id="c_v_butt"> Wait a minute!
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	
+	<div data-role="page" id="change_task_list" data-theme="b" data-url="change_task_list">
+		<div data-role="header">
+			<a data-rel="back" class="ui-btn-left" style="position:fixed;  z-index:12">Назад</a>
+			<a onclick="new_task();" class="ui-btn-right" style="position:fixed;  z-index:12">Добавить задачу</a>
+		</div>
+		<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup" id="chtl">
+			</fieldset>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	<div data-role="page" id="viol_list" data-theme="b" data-url="viol_list">
+		<div data-role="header">
+			<a data-rel="back" class="ui-btn-left" style="position:fixed;  z-index:12">Назад</a>
+		</div>
+		
+		<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup" id="viol">
+			</fieldset>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	<div data-role="page" id="add_task" data-theme="b" data-url="add_task">
+		<div data-role="header">
+			<h1></h1>	
+		<a data-rel="back" class="ui-btn-left">Назад</a>
+		</div>
+		<div data-role="content">	
+			<label for="name">Задача:</label>
+			<input type="text" name="name" id="task_name">
+			<label>Вид деятельности:</label><table><tbody><tr><td>
+			<input type="checkbox" name="checkbox-1" id="1" class="custom1">
+			<label for="1">Развлечение</label></td><td>
+			<input type="checkbox" name="checkbox-2" id="2" class="custom1">
+			<label for="2">Развитие</label></td></tr><tr><td>
+			<input type="checkbox" name="checkbox-3" id="4" class="custom1">
+			<label for="4">Общение</label></td><td>
+			<input type="checkbox" name="checkbox-4" id="8" class="custom1">
+			<label for="8">Творчество</label></td></tr><tr><td>
+			<input type="checkbox" name="checkbox-5" id="16" class="custom1">
+			<label for="16">Быт</label></td><td>
+			<input type="checkbox" name="checkbox-6" id="32" class="custom1">
+			<label for="32">Здоровье</label></td></tr></tbody></table>
+			 <fieldset>
+<label for="speed">Выбрать цель</label>
+<select id="my_targets_list">
+<option></option>
+
+</select>
+			<ul data-role="listview" data-inset="true" data-theme="a">
+				<li><a onclick="add_new_task()">Добавить задачу</a></li>
+			</ul>
+		</fieldset></div>
+		<div data-role="footer">			
+		</div>
+	</div>	
+	<div data-role="page" id="add_rule" data-theme="b" data-url="add_rule">
+		<div data-role="header">
+			<h1></h1>	
+		<a data-rel="back" class="ui-btn-left">Назад</a>
+		</div>
+		<div data-role="content">	
+			<label for="name">Правило:</label>
+			<input type="text" name="name" id="rule_name">
+			<ul data-role="listview" data-inset="true" data-theme="a">
+				<li><a onclick="add_new_rule()">Добавть правило</a></li>
+			</ul>
+		</div>
+		<div data-role="footer">			
+		</div>
+	</div>
+	<div data-role="page" id="rule_list" data-theme="b" data-url="rule_list">
+		<div data-role="header">
+			<a data-rel="back" class="ui-btn-left" style="position:fixed;  z-index:12">Назад</a>
+			<a href="#add_rule" class="ui-btn-right" style="position:fixed;  z-index:12">Добавить новое правило</a>
+		</div>
+		<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup" id="rules">
+			</fieldset>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	<div data-role="page" id="math_trainer" data-theme="b" data-url="math_trainer">
+		<div data-role="header">
+			<a data-rel="back" class="ui-btn-left" style="position:fixed;  z-index:12">Назад</a>
+		</div>
+		<br><br>
+		<div id="math_trainer_insert" data-role="fieldcontain">
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+	<div data-role="page" id="do_task" data-theme="b" data-url="do_task">
+		<div data-role="header">
+		<h1 id="current_task"></h1>	
+		</div>
+		<div data-role="content">
+		<div id="clock" style="color:#0055cc; font:bold 48pt Tahoma; text-align: center "></div>
+		<table><tbody><tr><td>
+		<label class="lbl_rslt" for="result"></label></td><td style="visibility: hidden;>
+		<input type=" text"="" name="result" id="result"></td></tr>	<tr id="logic4" style="visibility: hidden; "><td>
+		<label class="lbl_rslt" for="result">Выполнено: </label></td><td>
+		<input type="text" id="hm_"></td></tr>	</tbody></table>
+		<span id="alert_hm" hidden="" style="color: red; font-size: 15pt;">Данные учтены и записаны</span>
+		<ul data-role="listview" data-inset="true" data-theme="a">
+			<li><a id="stop_task" onclick="stop_task()">Закончить выполнение</a></li>
+		</ul>
+		</div>
+		<div data-role="footer">				
+		</div>
+	</div>
+		<div data-role="page" id="activities" data-theme="b" data-url="activities">
+		<div data-role="header">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a data-role="button" data-rel="back">Назад</a>
+		</div>
+		</div>
+		<div data-role="content">
+		<ul data-role="listview" data-inset="true" data-theme="a">
+				<li><a onclick="go_to_tasks(1);">Развлечение</a>
+				</li><li><a onclick="go_to_tasks(2);">Развитие</a></li>
+				<li><a onclick="go_to_tasks(4);">Общение</a></li>
+				<li><a onclick="go_to_tasks(8);">Творчество</a></li>
+				<li><a onclick="go_to_tasks(16);">Быт</a></li>
+				<li><a onclick="go_to_tasks(32)">Здоровье</a>
+			</li></ul>
+		</div>
+		<div data-role="footer">
+		</div> 
+	</div>
+		<div data-role="page" id="sched" data-theme="b" data-url="sched">
+		<div data-role="header">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#main_page" class="ui-btn ui-corner-all ui-btn-inline" style="z-index:12">Назад</a>
+			<a onclick="kid_viol(user_id)" class="ui-btn ui-corner-all ui-btn-inline"> Money:<span class="deb">55</span>&nbsp;&nbsp;&nbsp;<span class="hm">99</span>&nbsp;&nbsp;&nbsp;<span class="cred" style="color:red">0</span>&nbsp;&nbsp;<span class="cgreen" style="color:green">0</span></a>
+			<a id="prerv" onclick="  sched_breack();" class="ui-btn ui-corner-all ui-btn-inline" style="z-index:12">Прервать</a>
+			<a id="prerv" onclick="  status1();" class="ui-btn ui-corner-all ui-btn-inline" style="z-index:12">Статус</a>
+		</div>
+		</div>
+		<div data-role="content" id="my_sched">
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	<div data-role="page" data-close-btn="right" id="myDialog" data-url="myDialog">
+		<div data-role="header">
+			<h2>Dialog</h2>
+		</div>
+		<div role="main" class="ui-content">
+		<p id="p_dialog"></p>
+		<a class="ui-link ui-btn ui-btn-b ui-shadow ui-corner-all" data-theme="b" data-rel="back" data-role="button" role="button">
+    Ok, I get it</a>
+		</div>
+	</div>
+ 
+		<div data-role="page" data-close-btn="none" id="myDialog1" data-url="myDialog1">
+		<div data-role="header">
+			<h2>Задание выполнено!</h2>
+		</div>
+		<div role="main" class="ui-content">
+			<p id="p_dialog1"></p>
+			<table><tbody><tr><td>
+	<label class="flip-1">Все полностью&nbsp;&nbsp;&nbsp;</label></td><td>
+    <select id="fl1" name="flip-1" data-role="slider">
+        <option value="0">Нет</option>
+        <option value="1">Да</option>
+    </select></td></tr><tr style="visibility: hidden;"><td>
+	<label class="flip-1">Качественно&nbsp;&nbsp;&nbsp;</label></td><td>
+    <select id="fl2" name="flip-1" data-role="slider">
+        <option value="0">Нет</option>
+        <option value="1">Да</option>
+    </select></td></tr><tr style="visibility: hidden;"><td>
+	<label class="flip-1">Без отвлечений&nbsp;&nbsp;&nbsp;</label></td><td>
+	<select id="fl3" name="flip-2" data-role="slider">
+        <option value="0">Нет</option>
+        <option value="1">Да</option>
+    </select></td></tr><tr style="visibility: hidden;"><td>
+	<label class="flip-1">C&nbsp;&nbsp;&nbsp;</label></td><td>
+	<select id="fl4">
+	    <option value="0">???</option>
+		<option value="3">плохим</option>
+		<option value="2">не очень</option>
+		<option value="1">отличным</option>
+	</select></td><td>
+	<label class="flip-1">&nbsp;&nbsp;&nbsp; настроением
+	</label></td></tr></tbody></table>
+<a class="ui-link ui-btn ui-btn-inline ui-shadow ui-corner-all" data-theme="b" data-rel="back" data-role="button" role="button" id="sch_task_stop">
+Подтверждаю
+</a>
+<a class="ui-link ui-btn ui-btn-inline ui-shadow ui-corner-all" data-theme="b" data-rel="back" data-role="button" role="button">
+Не подтверждаю
+</a>
+</div>
+	</div>
+	
+
+
+	
+	<script type="text/javascript">
+	// <![CDATA[
+		(function(doc) {
+
+		var addEvent = 'addEventListener',
+		type = 'gesturestart',
+		qsa = 'querySelectorAll',
+		scales = [1, 1],
+		meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+		function fix() {
+		meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+		doc.removeEventListener(type, fix, true);
+		}
+
+		if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+		fix();
+		scales = [.25, 1.6];
+		doc[addEvent](type, fix, true);
+		}
+
+		}(document));
+	// ]]>
+	</script>
+
+
+<!-- DataLife Engine Copyright SoftNews Media Group (http://dle-news.ru) -->
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+<span class="ui-icon-loading"></span>
+<h1>loading</h1>
+</div>
+</body>
+</html>
+
+
+<link media="screen" href="/templates/Smartphone/css/jquery.mobile-1.4.3.min.css" type="text/css" rel="stylesheet">
